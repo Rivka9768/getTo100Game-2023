@@ -1,0 +1,42 @@
+.flexContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;   
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .flexItemActive {
+    background: black;
+    border-style: double;
+    border-radius: 15px;
+    border-color: red;
+    padding: 5px;
+    width: 250px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 25px;
+    color: rgb(253, 248, 248);
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+  }
+  .flexItem {
+    background: black;
+    opacity: 80%;
+    border-style: double;
+    border-radius: 15px;
+    border-color: black;
+    border-radius: 15px;
+    padding: 5px;
+    width: 250px;
+    height: 150px;
+    margin-top: 10px;
+    line-height: 25px;
+    color: rgb(253, 248, 248);
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+  }

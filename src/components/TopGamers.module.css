@@ -1,0 +1,20 @@
+.TopGamersDiv{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+table{
+
+    border:3px solid black;
+    border-radius: 15px;
+} 
+th{
+    border-bottom: 2px solid red;
+}
+td{
+    text-align: center;
+}
