@@ -44,8 +44,8 @@ const Registration = (props) => {
     }
     return (
         <>
-            {!props.startGame && <button onClick={() => setAddGamer(!addGamer)}>ADD GAMER <GoPersonAdd /></button>}
-            {!props.startGame && <button onClick={start}> START GAME  <FcStart /></button>}
+            {!props.startGame && <button onClick={() => setAddGamer(!addGamer)}><GoPersonAdd />  ADD GAMER </button>}
+            {!props.startGame && <button onClick={start}> <FcStart />   START GAME </button>}
             {!props.startGame && addGamer && <form onSubmit={addToPlayers}>
                 <input required type="text" placeholder='NAME' />
                 <input required type="email" name="" id="" placeholder='EMAIL ADDRESS' />
