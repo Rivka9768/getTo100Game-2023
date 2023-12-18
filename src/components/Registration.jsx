@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { GoPersonAdd } from "react-icons/go";
 import { FcStart } from "react-icons/fc";
-const Registration = (props) => {
+const Registration = ({startGame, setStartGame, gamers, setGamers, allPlayers, setAllPlayers}) => {
     const [addGamer, setAddGamer] = useState(false);
     const addToPlayers = (event) => {
         event.preventDefault();
@@ -19,24 +19,23 @@ const Registration = (props) => {
                     startScore = player.score
             }
             else
-                props.setAllPlayers([...props.allPlayers, { name: name.value, email: email.value, score: [] ,avg:0 }])
+                setAllPlayers([...allPlayers, { name: name.value, email: email.value, score: [], avg: 0 }])
         }
         else
-            props.setAllPlayers([...props.allPlayers, { name: name.value, email: email.value, score: [] ,avg:0}])
-        localStorage.setItem('allPlayers', JSON.stringify(props.allPlayers));
-        props.setGamers(prevGamers => [...prevGamers, { name: name.value, email: email.value, score: startScore, number: Math.floor(Math.random() * 100), isActive: false, numSteps: 0 }])
+            setAllPlayers([...allPlayers, { name: name.value, email: email.value, score: [], avg: 0 }])
+        localStorage.setItem('allPlayers', JSON.stringify(allPlayers));
+        setGamers(prevGamers => [...prevGamers, { name: name.value, email: email.value, score: startScore, number: Math.floor(Math.random() * 100), isActive: false, numSteps: 0 }])
         setAddGamer(!addGamer)
     }
 
     const start = () => {
-        props.setStartGame(!props.startGame)
-        debugger;
-        if (!props.gamers.length) {
-            props.setStartGame(props.startGame)
+        setStartGame(!startGame)
+        if (!gamers.length) {
+            setStartGame(startGame)
             alert("can not start game with no participants")
             return
         }
-        props.setGamers(prevGamers => [
+        setGamers(prevGamers => [
             { ...prevGamers[0], isActive: true },
             ...prevGamers.slice(1)
         ]);
@@ -44,9 +43,9 @@ const Registration = (props) => {
     }
     return (
         <>
-            {!props.startGame && <button onClick={() => setAddGamer(!addGamer)}><GoPersonAdd />  ADD GAMER </button>}
-            {!props.startGame && <button onClick={start}> <FcStart />   START GAME </button>}
-            {!props.startGame && addGamer && <form onSubmit={addToPlayers}>
+            {!startGame && <button onClick={() => setAddGamer(!addGamer)}><GoPersonAdd />  ADD GAMER </button>}
+            {!startGame && <button onClick={start}> <FcStart />   START GAME </button>}
+            {!startGame && addGamer && <form onSubmit={addToPlayers}>
                 <input required type="text" placeholder='NAME' />
                 <input required type="email" name="" id="" placeholder='EMAIL ADDRESS' />
                 <button type="submit">REGISTER</button>

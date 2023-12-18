@@ -1,8 +1,8 @@
 import React from 'react'
-const Gamer = (props) => {
+const Gamer = ({ gamers }) => {
     return (
         <>
-            {props.gamers.map((gamer, index) => {
+            {gamers.map((gamer, index) => {
                 return <p key={index}>NAME: {gamer.name} EMAIL: {gamer.email} </p>
             })}
 
