@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { GoPersonAdd } from "react-icons/go";
 import { FcStart } from "react-icons/fc";
+import style from './Registration.module.css'
 const Registration = ({startGame, setStartGame, gamers, setGamers, allPlayers, setAllPlayers}) => {
     const [addGamer, setAddGamer] = useState(false);
     const addToPlayers = (event) => {
@@ -48,7 +49,7 @@ const Registration = ({startGame, setStartGame, gamers, setGamers, allPlayers, s
             {!startGame && addGamer && <form onSubmit={addToPlayers}>
                 <input required type="text" placeholder='NAME' />
                 <input required type="email" name="" id="" placeholder='EMAIL ADDRESS' />
-                <button type="submit">REGISTER</button>
+                <button className={style.submitBtn} type="submit">REGISTER</button>
             </form>}
 
 

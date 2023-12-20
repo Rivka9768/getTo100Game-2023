@@ -1,19 +1,19 @@
 .TopGamersDiv{
-
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 
-
+h3{
+    color:  rgb(248, 81, 81);
+}
 table{
-
-    border:3px solid black;
     border-radius: 15px;
 } 
 th{
-    border-bottom: 2px solid red;
+    border-bottom: 2px double  rgb(248, 81, 81);
 }
 td{
     text-align: center;

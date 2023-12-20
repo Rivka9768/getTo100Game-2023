@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import GetTo100 from './components/GetTo100'
+import GetTo100 from './components/GetTo100/GetTo100'
 import './App.css'
 
 function App() {
