@@ -36,7 +36,3 @@ npm install
 
 # run dev server
 npm run dev   # then open the printed local URL
-
-# build for production
-npm run build
-npm run preview
