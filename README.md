@@ -1,8 +1,42 @@
-# React + Vite
+# 🎮 Get To 100 (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fast, minimalist **number strategy game** built with **React + Vite**.  
+Two players take turns adding numbers; the aim is to be the one who reaches **100** first.  
+Runs entirely in the browser and deploys cleanly to Vercel.
 
-Currently, two official plugins are available:
+🌐 **Live**: https://get-to100-game-2023.vercel.app/  
+📦 **Repo**: https://github.com/Rivka9768/getTo100Game-2023
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## ✨ Features
+- Instant, no-backend gameplay (pure front-end)
+- Clean, responsive UI
+- Lightweight build with Vite for super-fast loads
+
+---
+
+## 🛠 Tech Stack
+- **React** (with hooks)
+- **Vite** (dev server & build)
+- **JavaScript**, **CSS**, **HTML**
+- **Vercel** (deployment)
+
+---
+
+## 🚀 Local Development
+
+```bash
+# clone
+git clone https://github.com/Rivka9768/getTo100Game-2023.git
+cd getTo100Game-2023
+
+# install
+npm install
+
+# run dev server
+npm run dev   # then open the printed local URL
+
+# build for production
+npm run build
+npm run preview
